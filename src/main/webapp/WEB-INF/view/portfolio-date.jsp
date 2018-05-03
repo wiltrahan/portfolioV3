@@ -2,24 +2,22 @@
 
 <!DOCTYPE html>
 
-<html>
-<head>
-	
+
+<html lang="en">
+<head>	
 	<title>Date Time Totals</title>
-	
-	<link type="text/css" rel="stylesheet"
-		href="${pageContext.request.contextPath}/resources/css/style.css"/>
 		
 </head>
 <body>
+	<jsp:include page="parts/nav.html"/>
 
- 	<div id="wrapper">
+ 	<div id="container">
  		<div id="header">
  			<h2>We-B-Scraping!</h2>
  		
  		</div>
- 	</div>
- 	<div id="container">
+ 	
+ 	
  		<div id="content">
  		
  			<table>
