@@ -14,17 +14,11 @@
 <body>
 	
 	<nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1" id="nav-text">We-B-Scraping <i class="fas fa-chart-line"></i></span>
-</nav>
+    	<span class="navbar-brand mb-0 h1" id="nav-text">We-B-Scraping <i class="fas fa-chart-line"></i></span>
+	</nav>
 
- 	<!-- <div id="wrapper">
- 		<div id="header">
- 			<h2>We-B-Scraping!</h2>
- 		
- 		</div>
- 	</div> -->
  	<div id="container">
- 		<div id="content">
+ 		
  		
  			<table class="table table-striped table-bordered">
  				<thead class="thead-dark">
@@ -55,9 +49,6 @@
  				</c:forEach>		
  			
  			</table>
- 		
- 		</div>
- 	
  	</div>
  	
 </body>
