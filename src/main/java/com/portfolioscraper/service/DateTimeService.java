@@ -10,5 +10,5 @@ public interface DateTimeService {
 	public List<DateTime> getDateTimes();
 	
 	public List<Stock> getStocks(int id);
-
+	
 }

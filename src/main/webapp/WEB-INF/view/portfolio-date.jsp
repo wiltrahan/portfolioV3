@@ -16,7 +16,11 @@
     	<span class="navbar-brand mb-0 h1" id="nav-text">We-B-Scraping <i class="fas fa-chart-line"></i></span>
 	</nav>
 
- 	<div id="container">
+ 	<div class="container">
+ 		<h1 class="text-center stock-info-date">
+        	Stock Information For:
+            <p id="date"> DateHolder <span id="time"> TimeHolder</span></p>
+        </h1>
   		
  			<table class="table table-striped table-bordered animated zoomInUp">
  				<thead class="thead-dark">
@@ -42,7 +46,7 @@
  			
  			</table>
  		
- 	
+ 		<a href="list"><button type="button" class="btn btn-outline-primary">Back to daily listings</button></a>
  	</div>
  	
 </body>

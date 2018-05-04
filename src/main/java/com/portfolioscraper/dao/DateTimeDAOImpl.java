@@ -51,6 +51,7 @@ public class DateTimeDAOImpl implements DateTimeDAO {
 	@Override
 	public List<Stock> getStocks(int id) {
 		List<Stock> theStocks = new ArrayList<>();
+
 		
 		SessionFactory factory = new Configuration()
 				.configure()
@@ -64,10 +65,9 @@ public class DateTimeDAOImpl implements DateTimeDAO {
 			session.beginTransaction();
 
 			theStocks = session.createQuery("from Stock where date_time_id=" + id).getResultList();
-
-			for(Stock tempStock : theStocks) {
-				System.out.println(tempStock);
-			}
+//			for(Stock tempStock : theStocks) {
+//				System.out.println(tempStock);
+//			}
 
 			session.getTransaction().commit();
 		}

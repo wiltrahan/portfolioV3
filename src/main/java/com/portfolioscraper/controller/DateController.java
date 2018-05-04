@@ -41,7 +41,6 @@ public class DateController {
 		
 		// get stocks from database
 		List<Stock> theStocks = dateTimeService.getStocks(theId);
-
 		
 		//set stock list as a model attribute
 		theModel.addAttribute("stocks", theStocks);

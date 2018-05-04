@@ -16,10 +16,15 @@
 	<nav class="navbar navbar-light bg-light">
     	<span class="navbar-brand mb-0 h1" id="nav-text">We-B-Scraping <i class="fas fa-chart-line"></i></span>
 	</nav>
+	
+	<div class="container" id="jumbo">
+    	<div class="jumbotron">
+      		<h1>We-B-Scraping <i class="fas fa-chart-line"></i></h1>
+      		<p class="lead">Something witty will go here...</p>
+    	</div>
+  	</div>
 
- 	<div id="container">
- 		
- 		
+ 	<div class="container">
  			<table class="table table-striped table-bordered">
  				<thead class="thead-dark">
  					<tr>
@@ -33,21 +38,19 @@
  				
  				<c:forEach var="tempDate" items="${dates}">
  					<c:url var="portfolio" value="/date/portfolio">
- 						<c:param name="dateId" value="${tempDate.id}"/>
- 				
+ 						<c:param name="dateId" value="${tempDate.id}"/>	
  					</c:url>
- 				
- 				
+ 						
  					<tr>
  						<td> ${tempDate.date} </td>
  						<td> ${tempDate.time} </td>
  						<td> ${tempDate.total} </td>
  						<td> ${tempDate.dayGain} </td>
- 						<td><a href="${portfolio}"><button type="button" class="btn btn-outline-primary btn-block">More Info</button></a></td>
- 					</tr>
- 						
- 				</c:forEach>		
- 			
+ 						<td><a href="${portfolio}">
+ 						<button type="button" class="btn btn-outline-primary btn-block">
+ 								More Info</button></a></td>
+ 					</tr>					
+ 				</c:forEach>			
  			</table>
  	</div>
  	
