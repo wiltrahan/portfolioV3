@@ -52,7 +52,6 @@ public class DateTimeDAOImpl implements DateTimeDAO {
 	public List<Stock> getStocks(int id) {
 		List<Stock> theStocks = new ArrayList<>();
 
-		
 		SessionFactory factory = new Configuration()
 				.configure()
 				.addAnnotatedClass(DateTime.class)
@@ -75,6 +74,34 @@ public class DateTimeDAOImpl implements DateTimeDAO {
 			factory.close();
 		}
 		return theStocks;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<DateTime> getDate(int id) {
+		List<DateTime> theDate = new ArrayList<>();
+
+		SessionFactory factory = new Configuration()
+				.configure()
+				.addAnnotatedClass(DateTime.class)
+				.addAnnotatedClass(Stock.class)
+				.buildSessionFactory();
+
+		Session session = factory.getCurrentSession();
+
+		try {
+			session.beginTransaction();
+
+			theDate = session.createQuery("from DateTime where id=" + id).getResultList();
+//			for(Stock tempStock : theStocks) {
+//				System.out.println(tempStock);
+//			}
+
+			session.getTransaction().commit();
+		}
+		finally {
+			factory.close();
+		}
+		return theDate;
 	}
 	
 	

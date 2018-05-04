@@ -30,4 +30,9 @@ public class DateTimeServiceImpl implements DateTimeService {
 		return dateTimeDAO.getStocks(id);
 	}
 
+	@Override
+	public List<DateTime> getDate(int id) {
+		return dateTimeDAO.getDate(id);
+	}
+
 }

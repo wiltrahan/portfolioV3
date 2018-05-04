@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -31,6 +33,10 @@ public class Stock {
 	
 	@Column(name="totalShrs")
 	private String totalShrs;
+	
+	@ManyToOne
+	@JoinColumn(name="date_time_id")
+	private DateTime dateTime;
 	
 	public Stock() {
 		
@@ -91,6 +97,15 @@ public class Stock {
 
 	public void setTotalShrs(String totalShrs) {
 		this.totalShrs = totalShrs;
+	}
+	
+	
+	public DateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(DateTime dateTime) {
+		this.dateTime = dateTime;
 	}
 
 	@Override

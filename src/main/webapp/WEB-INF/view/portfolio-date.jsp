@@ -12,15 +12,19 @@
 		
 </head>
 <body>
-<nav class="navbar navbar-light bg-light">
+	<nav class="navbar navbar-light bg-light">
     	<span class="navbar-brand mb-0 h1" id="nav-text">We-B-Scraping <i class="fas fa-chart-line"></i></span>
 	</nav>
+	
+	
 
  	<div class="container">
+ 	<c:forEach var="tempDate" items="${date}">
  		<h1 class="text-center stock-info-date">
         	Stock Information For:
-            <p id="date"> DateHolder <span id="time"> TimeHolder</span></p>
+            <p id="date"> ${tempDate.date} <span id="time"> ${tempDate.time}</span></p>
         </h1>
+    </c:forEach> 
   		
  			<table class="table table-striped table-bordered animated zoomInUp">
  				<thead class="thead-dark">

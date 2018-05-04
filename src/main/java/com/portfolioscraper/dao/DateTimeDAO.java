@@ -20,4 +20,6 @@ public interface DateTimeDAO {
 
 	public List<Stock> getStocks(int id);
 	
+	public List<DateTime> getDate(int id);
+	
 }

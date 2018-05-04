@@ -41,9 +41,11 @@ public class DateController {
 		
 		// get stocks from database
 		List<Stock> theStocks = dateTimeService.getStocks(theId);
+		List<DateTime> theDate = dateTimeService.getDate(theId);
 		
 		//set stock list as a model attribute
 		theModel.addAttribute("stocks", theStocks);
+		theModel.addAttribute("date", theDate);
 		
 		// send over to jsp page
 		
