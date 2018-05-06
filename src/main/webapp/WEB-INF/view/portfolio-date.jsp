@@ -22,7 +22,8 @@
  	<c:forEach var="tempDate" items="${date}">
  		<h1 class="text-center stock-info-date">
         	Stock Information For:
-            <p id="date"> ${tempDate.date} <span id="time"> ${tempDate.time}</span></p>
+        	<br>
+            <span id="date"> ${tempDate.date} <span id="time"> ${tempDate.time}</span></span>
         </h1>
     </c:forEach> 
   		

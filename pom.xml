@@ -18,7 +18,7 @@
 	<url>http://maven.apache.org</url>
 	<dependencies>
 
-		<!-- Spring Framework & Security -->
+		<!-- Spring Framework -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
@@ -43,10 +43,24 @@
 			<version>${springframework.version}</version>
 		</dependency>
 
+		
+		<!-- Security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
-			<version>5.0.4.RELEASE</version>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		
+		<!-- <dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency> -->
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${springsecurity.version}</version>
 		</dependency>
 
 		<!-- Hibernate -->
@@ -54,6 +68,20 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.2.17.Final</version>
+		</dependency>
+		
+		<!-- mysql and c3po -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.39</version>
+		</dependency>
+
+		<!-- other -->
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.5.2</version>
 		</dependency>
 
 		<!-- JavaX -->
@@ -100,20 +128,6 @@
 			<artifactId>selenium-firefox-driver</artifactId>
 			<version>3.11.0</version>
 		</dependency>
-		
-		<!-- mysql -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.39</version>
-		</dependency>
-
-		<!-- other -->
-		<dependency>
-			<groupId>com.mchange</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>0.9.5.2</version>
-		</dependency>
 
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
@@ -127,7 +141,7 @@
 			<version>2.2.11</version>
 		</dependency>
 
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>4.1.0</version>
@@ -137,7 +151,7 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
 			<version>3.3.1</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- TEST -->
 		<dependency>
