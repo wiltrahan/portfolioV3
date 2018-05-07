@@ -13,6 +13,12 @@ body {
     font-size: 1.6rem;
 }
 
+.login_name {
+	color: #F5F5D4;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
 .navbar {
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75);}
 
