@@ -31,7 +31,7 @@ public class AppConfig {
 	private Logger logger = Logger.getLogger(getClass().getName());
 	
 	
-	//define a bean vor ViewResolver
+	//define a bean for ViewResolver
 	@Bean
 	public ViewResolver viewResolver() {
 		
