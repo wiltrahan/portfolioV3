@@ -91,8 +91,8 @@ public class RegistrationController {
 		}
 
 		//
-		// whew ... we passed all of the validation checks!
-		// let's get down to business!!!
+		// once all validation checks pass...continue
+		// 
 		//
 
 		// encrypt the password
