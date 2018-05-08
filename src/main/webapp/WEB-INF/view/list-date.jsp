@@ -23,7 +23,7 @@
 	    <ul class="nav navbar-nav navbar-right">
 	      <li class="login_name">Welcome: <security:authentication property="principal.username" />!</li>
 	      <li><form:form action="${pageContext.request.contextPath}/logout" 
-			   method="POST"> <input type="submit" value="Logout" /></form:form>
+			   method="POST"> <input type="submit" class="btn navbar-btn" value="Logout" /></form:form>
 	      </li>
 	    </ul>
 	  </div>
