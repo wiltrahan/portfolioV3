@@ -177,7 +177,7 @@
 
 	<build>
 		<finalName>portfolioV3</finalName>
-		<pluginManagement>
+		<!-- <pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -185,6 +185,6 @@
     				<version>3.2.0</version>
 				</plugin>
 			</plugins>
-		</pluginManagement>
+		</pluginManagement> -->
 	</build>
 </project>

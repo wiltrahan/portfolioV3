@@ -5,13 +5,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
 	
 	<title>Date Totals</title>
 	<%@ include file="./parts/meta.jsp"%>
-    <title>Totals</title>
-    <%@ include file="./parts/header.jsp" %>
+	<%@ include file="./parts/header.jsp"%>
 		
 </head>
 <body>

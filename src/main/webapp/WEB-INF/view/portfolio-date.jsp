@@ -1,4 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
@@ -7,9 +7,9 @@
 
 <html lang="en">
 <head>	
-	<title>Date Time Totals</title>
+	<title>Portfolio Information</title>
 	<%@ include file="./parts/meta.jsp"%>
-    <title>Totals</title>
+
     <%@ include file="./parts/header.jsp" %>
 		
 </head>
