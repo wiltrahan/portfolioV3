@@ -31,7 +31,7 @@
 	<div class="container" id="jumbo">
     	<div class="jumbotron">
       		<h1>We-B-Scraping <i class="fas fa-chart-line"></i></h1>
-      		<p class="lead">Something witty will go here...</p>
+      		<p class="lead">A full stack Java application by Wil Trahan</p>
 	
     	</div>
   	</div>

@@ -1,2 +1,3 @@
- <% response.sendRedirect("date/list"); %> 
-<%-- <% response.sendRedirect("/portfolioV3/showMyLoginPage"); %>  --%>
+<% response.sendRedirect("date/list"); %> 
+
+<%-- <% response.sendRedirect("showMyLoginPage"); %> --%>
