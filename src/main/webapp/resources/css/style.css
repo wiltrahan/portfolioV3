@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500|Raleway:300|Roboto:100');
 body {
     background-color: #F2F2F2;
+    padding-top: 60px;
 }
 
 .bg-light {
     background-color: #52656B!important;
+   
 }
 #nav-text {
     color: #F5F5D4;
@@ -32,12 +34,25 @@ body {
     border-color: #415054;
 
 }
+
+#date-tron {
+	margin-top: 30px;
+}
 .stock-info-date {
     padding-top: 10px;
     color: #415054;
     font-family: 'Roboto', sans-serif;
     font-size: 3rem;
+    margin-top: 30px;
 
+}
+
+.my-nav-btn {
+	height: 30px;
+	padding: 0;
+	width: 70px;
+	background-color: #F2F2F2;;
+	color: #52656B;
 }
 #date {
     font-size: 0.8em;
@@ -57,4 +72,20 @@ body {
 
 #app-info-box {
 	background-color: #F7F7F7;
+}
+
+.my-table {
+	margin-bottom: 100px;
+}
+
+.footer {
+	height: 40px;
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #60767D;
+}
+.foot-text {
+	
+	color: #DBDBBE;
 }

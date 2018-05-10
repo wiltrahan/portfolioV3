@@ -28,7 +28,7 @@
 
 <body>
 
-	<nav class="navbar navbar-light bg-light">
+	<nav class="navbar navbar-light bg-light fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<span class="navbar-brand mb-0 h1" id="nav-text">We-B-Scraping!
@@ -147,5 +147,10 @@
 			</div>
 		</div>
 	</div>
+	<footer class="footer">
+		<div class="container">
+			<span class="foot-text">This is America</span>
+		</div>
+	</footer>
 </body>
 </html>
