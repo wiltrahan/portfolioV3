@@ -43,6 +43,11 @@
 
 		</div>
 	</div>
+	
+	<div>
+	<button type="button" name="button" value="snapshot 
+				"class="btn btn-outline-primary btn-block"> Get New Snapshot!</button>
+	</div>
 
 	<div class="container">
 		<table class="table table-striped table-bordered my-table">
