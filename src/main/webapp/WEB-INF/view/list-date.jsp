@@ -12,7 +12,17 @@
 <title>Date Totals</title>
 <%@ include file="./parts/meta.jsp"%>
 <%@ include file="./parts/header.jsp"%>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#snap').click(function()
+		{
+			alert("how bout daaaah?");
+		});
+	});
 
+
+</script>
 </head>
 <body>
 	<nav class="navbar navbar-light bg-light fixed-top">
@@ -45,9 +55,10 @@
 	</div>
 	
 	<div>
-	<button type="button" name="button" value="snapshot 
-				"class="btn btn-outline-primary btn-block"> Get New Snapshot!</button>
+		<input type="button" value="Get Snapshot" name="Snappy" id="snap"/>	
 	</div>
+	
+	
 
 	<div class="container">
 		<table class="table table-striped table-bordered my-table">

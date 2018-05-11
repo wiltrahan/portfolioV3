@@ -19,6 +19,18 @@ public class Scrape implements IScrape {
 	
 	public static void main(String[] args) {
 		
+//		driver = new FirefoxDriver();
+//		
+//		Personal personal = new Personal();
+//		String username = personal.getUsername();
+//		String password = personal.getPassword();
+//		
+//		Scrape scrape = new Scrape();
+//		scrape.login(username, password);
+	}
+	
+	public void startDeScrapah() {
+		
 		driver = new FirefoxDriver();
 		
 		Personal personal = new Personal();
