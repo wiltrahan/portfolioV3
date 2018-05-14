@@ -15,9 +15,14 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#snap').click(function()
-		{
-			alert("how bout daaaah?");
+		$('#snap').click(function(e) {
+			e.preventDefault();
+			alert("something happened");
+			$.get("${pageContext.request.contextPath}/SnapshotServlet",
+					{button: $(this).val()}).
+					done(function(response) {
+						console.log(response);
+					});
 		});
 	});
 
@@ -55,7 +60,7 @@
 	</div>
 	
 	<div>
-		<input type="button" value="Get Snapshot" name="Snappy" id="snap"/>	
+		<button class="btn" id="snap" value="snapshot">Get Snapshot!</button>
 	</div>
 	
 	

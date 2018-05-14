@@ -29,6 +29,8 @@ public class Scrape implements IScrape {
 //		scrape.login(username, password);
 	}
 	
+	
+	
 	public void startDeScrapah() {
 		
 		driver = new FirefoxDriver();
@@ -37,8 +39,8 @@ public class Scrape implements IScrape {
 		String username = personal.getUsername();
 		String password = personal.getPassword();
 		
-		Scrape scrape = new Scrape();
-		scrape.login(username, password);
+		//Scrape scrape = new Scrape();
+		login(username, password);
 	}
 	
 	private void login(String username, String password) {
