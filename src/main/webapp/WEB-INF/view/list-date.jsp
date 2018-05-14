@@ -12,21 +12,16 @@
 <title>Date Totals</title>
 <%@ include file="./parts/meta.jsp"%>
 <%@ include file="./parts/header.jsp"%>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#snap').click(function(e) {
 			e.preventDefault();
-			alert("something happened");
-			$.get("${pageContext.request.contextPath}/SnapshotServlet",
-					{button: $(this).val()}).
-					done(function(response) {
-						console.log(response);
-					});
+			$.get("${pageContext.request.contextPath}/SnapshotServlet", {
+			})
 		});
 	});
-
-
 </script>
 </head>
 <body>
@@ -43,7 +38,8 @@
 				</li>
 				<li><form:form
 						action="${pageContext.request.contextPath}/logout" method="POST">
-						<input type="submit" class="btn navbar-btn my-nav-btn" value="Logout" />
+						<input type="submit" class="btn navbar-btn my-nav-btn"
+							value="Logout" />
 					</form:form></li>
 			</ul>
 		</div>
@@ -58,12 +54,12 @@
 
 		</div>
 	</div>
-	
-	<div>
-		<button class="btn" id="snap" value="snapshot">Get Snapshot!</button>
+
+	<div class="container">
+		<button class="btn" id="snap" value="snapshot">Get New Snapshot!</button>
 	</div>
-	
-	
+
+
 
 	<div class="container">
 		<table class="table table-striped table-bordered my-table">
@@ -95,7 +91,7 @@
 			</c:forEach>
 		</table>
 	</div>
-	
+
 	<footer class="footer">
 		<div class="container">
 			<span class="foot-text">This is America</span>
