@@ -31,7 +31,7 @@ public class Scrape implements IScrape {
 	
 	
 	
-	public void startDeScrapah() {
+	public void startScraping() {
 		
 		driver = new FirefoxDriver();
 		

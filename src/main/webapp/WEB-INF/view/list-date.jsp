@@ -18,8 +18,13 @@
 	$(document).ready(function() {
 		$('#snap').click(function(e) {
 			e.preventDefault();
-			$.get("${pageContext.request.contextPath}/SnapshotServlet", {
-			})
+			$.ajax({
+				url: '${pageContext.request.contextPath}/SnapshotServlet',
+				type: 'GET',
+				success:function() {
+					alert("Got this far");
+				}
+			});
 		});
 	});
 </script>
@@ -58,8 +63,6 @@
 	<div class="container">
 		<button class="btn" id="snap" value="snapshot">Get New Snapshot!</button>
 	</div>
-
-
 
 	<div class="container">
 		<table class="table table-striped table-bordered my-table">

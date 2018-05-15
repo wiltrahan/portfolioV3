@@ -123,8 +123,6 @@ public class DateTimeDAOImpl implements DateTimeDAO {
 
 			tempDate.addStock(Scrape.stockScrape());
 
-			
-			
 			//start transaction
 			session.beginTransaction();
 			
@@ -137,6 +135,7 @@ public class DateTimeDAOImpl implements DateTimeDAO {
 			
 		} finally {
 			sessionFactory.close();
+			System.out.println("HOW ABOUT NOW?????");
 		}
 		
 	}
