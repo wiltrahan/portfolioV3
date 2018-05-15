@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="security"
-	uri="http://www.springframework.org/security/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 
@@ -24,7 +24,6 @@
 				success:function() {
 					//write a function to refresh page here.
 					document.location.assign("list");
-					console.log("REFRESHED!");
 				}
 			});
 		});
@@ -79,8 +78,13 @@
 					<th>More Info</th>
 				</tr>
 			</thead>
+			
+			<%-- Keep a reference to the size of the collection --%>
+			<c:set var="num_dates" value="${fn:length(dates)}" />
 
-			<c:forEach var="tempDate" items="${dates}">
+			<%-- Iterate through items. Start at 1 to avoid array index out of bounds --%>
+			<c:forEach var="i" begin="1" end="${num_dates}" step="1">
+				<c:set var="tempDate" value="${dates[num_dates - i]}"/>
 				<c:url var="portfolio" value="/date/portfolio">
 					<c:param name="dateId" value="${tempDate.id}" />
 				</c:url>

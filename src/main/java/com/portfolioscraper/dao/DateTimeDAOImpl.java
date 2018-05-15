@@ -135,7 +135,6 @@ public class DateTimeDAOImpl implements DateTimeDAO {
 			
 		} finally {
 			sessionFactory.close();
-			System.out.println("HOW ABOUT NOW?????");
 		}
 		
 	}
