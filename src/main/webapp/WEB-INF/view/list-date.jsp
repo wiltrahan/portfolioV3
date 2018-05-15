@@ -22,11 +22,15 @@
 				url: '${pageContext.request.contextPath}/SnapshotServlet',
 				type: 'GET',
 				success:function() {
-					alert("Got this far");
+					//write a function to refresh page here.
+					document.location.assign("list");
+					console.log("REFRESHED!");
 				}
 			});
 		});
 	});
+	
+	
 </script>
 </head>
 <body>
