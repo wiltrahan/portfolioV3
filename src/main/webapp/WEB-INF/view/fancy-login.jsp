@@ -139,6 +139,8 @@
   						<li class="list-group-item">Spring Security</li>
   						<li class="list-group-item">Hibernate</li>
   						<li class="list-group-item">Maven</li>
+  						<li class="list-group-item">JavaScript</li>
+  						<li class="list-group-item">jQuery</li>
   						<li class="list-group-item">MySql</li>
   						<li class="list-group-item">Selenium</li>
   						<li class="list-group-item">Bootstrap</li>
