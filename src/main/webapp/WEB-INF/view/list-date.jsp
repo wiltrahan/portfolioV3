@@ -64,7 +64,9 @@
 	</div>
 
 	<div class="container">
-		<button class="btn" id="snap" value="snapshot">Get New Snapshot!</button>
+		<button class="btn btn-outline-primary" id="snap" value="snapshot">Get New Snapshot!</button>
+		<hr>
+		<p>New snapshot will take approximately 15-20 seconds to load.</p>
 	</div>
 
 	<div class="container">
@@ -105,7 +107,7 @@
 
 	<footer class="footer">
 		<div class="container">
-			<span class="foot-text">This is America</span>
+			<span class="foot-text">Wil Trahan Designs</span>
 		</div>
 	</footer>
 </body>

@@ -101,9 +101,11 @@
 								</div>
 
 								<!-- Login/Submit Button -->
-								<div style="margin-top: 10px" class="form-group">
+								<div class="form-group">
 									<div class="col-sm-6 controls">
 										<button type="submit" class="btn btn-success">Login</button>
+										
+										
 									</div>
 								</div>
 
@@ -116,8 +118,7 @@
 					</div>
 
 					<div>
-						<a
-							href="${pageContext.request.contextPath}/register/showRegistrationForm"
+						<a href="${pageContext.request.contextPath}/register/showRegistrationForm"
 							class="btn btn-primary" role="button" aria-pressed="true">Register
 							New User</a>
 					</div>
@@ -130,7 +131,8 @@
 					  CareerDevs Computer Science Academy.  While most of the implementation was left up to me to decide upon
 					  there were a few requirements that had to be met.  First of which, was that the application scraped financial
 					  information from a site, such as Yahoo Finance.  Once the information was obtained, it was to be put into
-					  a database of my choice, then retrieved from the database and displayed to the user. <br><br>
+					  a database of my choice, then retrieved from the database and displayed to the user.  Please log in, or register a new account 
+					  and have a look around.  No personal information is needed to register a new account. <br><br>
 					  Technologies used in this application are as follows:
 					  </p>
 					  <ul class="list-group list-group-flush">
@@ -151,7 +153,7 @@
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<span class="foot-text">This is America</span>
+			<span class="foot-text">Wil Trahan Designs</span>
 		</div>
 	</footer>
 </body>

@@ -74,7 +74,7 @@
 	</div>
 	<footer class="footer">
 		<div class="container">
-			<span class="foot-text">This is America</span>
+			<span class="foot-text">Wil Trahan Designs</span>
 		</div>
 	</footer>
 </body>

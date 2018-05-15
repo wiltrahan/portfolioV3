@@ -48,6 +48,12 @@
 				class="btn btn-outline-primary">Back to Home Page</button></a>
 		
 	</div>
+	
+	<footer class="footer">
+		<div class="container">
+			<span class="foot-text">Wil Trahan Designs</span>
+		</div>
+	</footer>
 
 </body>
 

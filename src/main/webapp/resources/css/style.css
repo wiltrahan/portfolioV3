@@ -79,6 +79,8 @@ body {
 }
 
 .footer {
+	
+	bottom: 0;
 	height: 40px;
 	margin-top: 20px;
 	padding-top: 10px;
