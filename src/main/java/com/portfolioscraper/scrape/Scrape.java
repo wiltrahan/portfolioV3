@@ -7,6 +7,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.portfolioscraper.dao.DateTimeDAOImpl;
 import com.portfolioscraper.entity.DateTime;
@@ -33,7 +34,10 @@ public class Scrape implements IScrape {
 	
 	public void startScraping() {
 		
-		driver = new FirefoxDriver();
+		FirefoxOptions options = new FirefoxOptions();
+		options.setHeadless(true);
+		
+		driver = new FirefoxDriver(options);
 		
 		Personal personal = new Personal();
 		String username = personal.getUsername();
