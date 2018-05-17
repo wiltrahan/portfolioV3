@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/").authenticated()
 		.and()
 		.formLogin()
-			.loginPage("/showMyLoginPage")
+			.loginPage("/welcome")
 			.loginProcessingUrl("/authenticateTheUser")
 			.defaultSuccessUrl("/date/list", true)
 			.permitAll()
