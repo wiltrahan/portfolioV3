@@ -78,6 +78,10 @@ body {
 	margin-bottom: 100px;
 }
 
+new-snapshot {
+	border: 2px solid red;
+}
+
 .footer {
 	
 	bottom: 0;

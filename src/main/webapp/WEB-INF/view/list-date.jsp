@@ -23,13 +23,16 @@
 				type: 'GET',
 				success:function() {
 					//write a function to refresh page here.
-					document.location.assign("list");
+					$("#snap-wait").html("<b>SNAPSHOT COMPLETE!!</b>");
+					setTimeout(function() {
+						document.location.assign("list");
+					}, 5000);
+					
+					//document.location.assign("list");		
 				}
 			});
 		});
-	});
-	
-	
+	});	
 </script>
 </head>
 <body>
@@ -48,7 +51,8 @@
 						action="${pageContext.request.contextPath}/logout" method="POST">
 						<input type="submit" class="btn navbar-btn my-nav-btn"
 							value="Logout" />
-					</form:form></li>
+					</form:form>
+				</li>
 			</ul>
 		</div>
 	</nav>
@@ -66,7 +70,7 @@
 	<div class="container">
 		<button class="btn btn-outline-primary" id="snap" value="snapshot">Get New Snapshot!</button>
 		<hr>
-		<p>New snapshot will take approximately 15-20 seconds to load.</p>
+		<p id="snap-wait">New snapshot will take approximately 15-20 seconds to load so Please-B-Patient <i class="far fa-clock"></i></p>
 	</div>
 
 	<div class="container">
@@ -91,7 +95,7 @@
 					<c:param name="dateId" value="${tempDate.id}" />
 				</c:url>
 
-				<tr>
+				<tr class="snapshot">
 					<td>${tempDate.date}</td>
 					<td>${tempDate.time}</td>
 					<td>${tempDate.total}</td>
