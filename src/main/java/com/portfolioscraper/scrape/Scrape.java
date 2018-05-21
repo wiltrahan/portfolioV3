@@ -34,11 +34,11 @@ public class Scrape implements IScrape {
 	
 	public void startScraping() {
 		
-//		FirefoxOptions options = new FirefoxOptions();
-//		options.setHeadless(true);
+		FirefoxOptions options = new FirefoxOptions();
+		options.setHeadless(true);
 		
-//		driver = new FirefoxDriver(options);
-		driver = new FirefoxDriver();
+		driver = new FirefoxDriver(options);
+		//driver = new FirefoxDriver();
 		
 		Personal personal = new Personal();
 		String username = personal.getUsername();

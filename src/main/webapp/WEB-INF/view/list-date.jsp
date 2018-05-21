@@ -68,7 +68,7 @@
 	<div class="container">
 		<button class="btn btn-outline-primary" id="snap" value="snapshot">Get New Snapshot!</button>
 		<hr>
-		<p id="snap-wait">New snapshot will take approximately 15-20 seconds to load so Please-B-Patient <i class="far fa-clock"></i></p>
+		<p id="snap-wait">New snapshot will take approximately 10-15 seconds to load so Please-B-Patient <i class="far fa-clock"></i></p>
 	</div>
 
 	<div class="container">
