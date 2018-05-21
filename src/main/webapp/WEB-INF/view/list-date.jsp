@@ -12,17 +12,29 @@
 <title>Date Totals</title>
 <%@ include file="./parts/meta.jsp"%>
 <%@ include file="./parts/header.jsp"%>
-<script type="text/javascript"
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
+	
+
+	
+	
+	
 	$(document).ready(function() {
+		$('#loading').hide();
+        
 		$('#snap').click(function(e) {
 			e.preventDefault();
+			$(document).ajaxStart(function() {
+                $('#loading').show();
+            })
 			$.ajax({
 				url: '${pageContext.request.contextPath}/SnapshotServlet',
 				type: 'GET',
 				success:function() {
 					//write a function to refresh page here.
+					$(document).ajaxStop(function() {
+						$('#loading').hide();
+					})
 					$("#snap-wait").html("SNAPSHOT COMPLETE!").addClass("new-snapshot");
 					  setTimeout(function() {
 						document.location.assign("list");
@@ -69,6 +81,11 @@
 		<button class="btn btn-outline-primary" id="snap" value="snapshot">Get New Snapshot!</button>
 		<hr>
 		<p id="snap-wait">New snapshot will take approximately 10-15 seconds to load so Please-B-Patient <i class="far fa-clock"></i></p>
+	</div>
+	
+	<div id="loading">
+    	<!-- <div id="spinner"></div> -->
+    	Scrrrrrrapppppe In Progress!
 	</div>
 
 	<div class="container">

@@ -137,10 +137,10 @@
 					  </p>
 					  <ul class="list-group list-group-flush">
   						<li class="list-group-item">Java 9</li>
+  						<li class="list-group-item">Maven</li>
   						<li class="list-group-item">Spring</li>
   						<li class="list-group-item">Spring Security</li>
   						<li class="list-group-item">Hibernate</li>
-  						<li class="list-group-item">Maven</li>
   						<li class="list-group-item">JavaScript</li>
   						<li class="list-group-item">jQuery</li>
   						<li class="list-group-item">MySql</li>

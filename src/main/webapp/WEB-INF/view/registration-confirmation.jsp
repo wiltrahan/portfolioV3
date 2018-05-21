@@ -49,11 +49,7 @@
 		
 	</div>
 	
-	<footer class="footer">
-		<div class="container">
-			<span class="foot-text">Wil Trahan Designs</span>
-		</div>
-	</footer>
+	
 
 </body>
 
