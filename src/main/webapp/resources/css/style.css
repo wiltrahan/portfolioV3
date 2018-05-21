@@ -78,8 +78,11 @@ body {
 	margin-bottom: 100px;
 }
 
-new-snapshot {
-	border: 2px solid red;
+.new-snapshot {
+	color: #00FF17;
+	font-size: 150%;
+	font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
 }
 
 .footer {
