@@ -34,10 +34,11 @@ public class Scrape implements IScrape {
 	
 	public void startScraping() {
 		
-		FirefoxOptions options = new FirefoxOptions();
-		options.setHeadless(true);
+//		FirefoxOptions options = new FirefoxOptions();
+//		options.setHeadless(true);
 		
-		driver = new FirefoxDriver(options);
+//		driver = new FirefoxDriver(options);
+		driver = new FirefoxDriver();
 		
 		Personal personal = new Personal();
 		String username = personal.getUsername();
@@ -76,7 +77,7 @@ public class Scrape implements IScrape {
 		try {
 			driver.navigate().to("https://finance.yahoo.com/portfolio/p_0/view/v1");
 			Thread.sleep(3000);
-			//driver.findElement(By.xpath("/html/body/dialog/section/button")).click();
+			driver.findElement(By.xpath("/html/body/dialog/section/button")).click();								
 			valueScrape();
 		} catch (Exception e) {
 			System.out.println("To Portfolio Failed: " + e.getMessage());

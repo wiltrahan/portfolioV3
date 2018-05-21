@@ -23,10 +23,10 @@
 				type: 'GET',
 				success:function() {
 					//write a function to refresh page here.
-					$("#snap-wait").html("<b>SNAPSHOT COMPLETE!!</b>").addClass("new-snapshot animated flash");
-					setTimeout(function() {
+					$("#snap-wait").html("SNAPSHOT COMPLETE!").addClass("new-snapshot");
+					  setTimeout(function() {
 						document.location.assign("list");
-					}, 3000);		
+					}, 2000); 
 				}
 			});
 		});
