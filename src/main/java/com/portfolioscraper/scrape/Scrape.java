@@ -106,6 +106,7 @@ public class Scrape implements IScrape {
 					driver.findElement(By.xpath("/html/body/div[2]/div[3]/section/section[2]/div[2]/table/tbody/tr[" + i + "]/td[8]")).getText()
 			));
 		}
+		driver.quit();
 		return stocks;
 		
 	}
