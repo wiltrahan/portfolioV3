@@ -16,11 +16,9 @@
 <script type="text/javascript">
 	
 
-	
-	
-	
 	$(document).ready(function() {
 		$('#loading').hide();
+		$('.scrape-error').hide();
         
 		$('#snap').click(function(e) {
 			e.preventDefault();
@@ -35,10 +33,16 @@
 					$(document).ajaxStop(function() {
 						$('#loading').hide();
 					})
-					$("#snap-wait").html("SNAPSHOT COMPLETE!").addClass("new-snapshot");
+					$("#snap-wait").html("Success! Loading in: 3...2...").addClass("new-snapshot text-center");
 					  setTimeout(function() {
 						document.location.assign("list");
-					}, 2000); 
+					}, 3000); 
+				},
+				fail: function() {
+					$(document).ajaxStop(function() {
+						$('#loading').hide();
+						$('.scrape-error').show();
+					});
 				}
 			});
 		});
@@ -83,9 +87,12 @@
 		<p id="snap-wait">New snapshot will take approximately 10-15 seconds to load so Please-B-Patient <i class="far fa-clock"></i></p>
 	</div>
 	
-	<div id="loading">
-    	<!-- <div id="spinner"></div> -->
-    	Scrrrrrrapppppe In Progress!
+	<div class="container text-center">
+		<div id="loading">
+    		<!-- <div id="spinner"></div> -->
+    		<p>Scrape In Progress! <span><i class="fas fa-stopwatch"></i></span></p>
+    		<p class="scrape-error">Something went wrong, please try again. </p>
+		</div>
 	</div>
 
 	<div class="container">

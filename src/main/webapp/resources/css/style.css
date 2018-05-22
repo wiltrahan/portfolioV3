@@ -86,7 +86,6 @@ body {
 }
 
 .footer {
-	
 	bottom: 0;
 	height: 40px;
 	margin-top: 20px;
@@ -94,12 +93,20 @@ body {
 	padding-bottom: 10px;
 	background-color: #60767D;
 }
-.foot-text {
-	
+.foot-text {	
 	color: #DBDBBE;
 }
 
 
 /* LOADING */
-
+#loading {
+	color: #FF1959;
+	font-size: 200%;
+	font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    animation: pulse 1s infinite;
+}
+#loading span{
+	color: #52656B;;
+}
 
