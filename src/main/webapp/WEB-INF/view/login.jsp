@@ -35,6 +35,19 @@
 					<i class="fas fa-chart-line"></i>
 				</span>
 			</div>
+			<c:if test="${not empty pageContext.request.userPrincipal}">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="login_name">Welcome: <security:authentication
+							property="principal.username" />!
+					</li>
+					<li><form:form
+							action="${pageContext.request.contextPath}/logout" method="POST">
+							<input type="submit" class="btn navbar-btn my-nav-btn"
+								value="Logout" />
+						</form:form>
+					</li>
+				</ul>
+			</c:if>
 		</div>
 	</nav>
 
@@ -104,8 +117,8 @@
 								<div class="form-group">
 									<div class="col-sm-6 controls">
 										<button type="submit" class="btn btn-success">Login</button>
-										
-										
+
+
 									</div>
 								</div>
 
@@ -118,35 +131,41 @@
 					</div>
 
 					<div>
-						<a href="${pageContext.request.contextPath}/register/showRegistrationForm"
+						<a
+							href="${pageContext.request.contextPath}/register/showRegistrationForm"
 							class="btn btn-primary" role="button" aria-pressed="true">Register
 							New User</a>
 					</div>
 				</div>
 			</div>
-			
-			<div class="col-md-8" >
-				<div class="col-md-12" id="app-info-box" >
-					<p class="text-justify">I was tasked with creating a full stack Java application for my final project at the
-					  CareerDevs Computer Science Academy.  While most of the implementation was left up to me to decide upon
-					  there were a few requirements that had to be met.  First of which, was that the application scraped financial
-					  information from a site, such as Yahoo Finance.  Once the information was obtained, it was to be put into
-					  a database of my choice, then retrieved from the database and displayed to the user.  Please log in, or register a new account 
-					  and have a look around.  No personal information is needed to register a new account. <br><br>
-					  Technologies used in this application are as follows:
-					  </p>
-					  <ul class="list-group list-group-flush">
-  						<li class="list-group-item">Java 9</li>
-  						<li class="list-group-item">Maven</li>
-  						<li class="list-group-item">Spring</li>
-  						<li class="list-group-item">Spring Security</li>
-  						<li class="list-group-item">Hibernate</li>
-  						<li class="list-group-item">JavaScript</li>
-  						<li class="list-group-item">jQuery</li>
-  						<li class="list-group-item">MySql</li>
-  						<li class="list-group-item">Selenium</li>
-  						<li class="list-group-item">Bootstrap</li>
-					  </ul>
+
+			<div class="col-md-8">
+				<div class="col-md-12" id="app-info-box">
+					<p class="text-justify">
+						I was tasked with creating a full stack Java application for my
+						final project at the CareerDevs Computer Science Academy. While
+						most of the implementation was left up to me to decide upon there
+						were a few requirements that had to be met. First of which, was
+						that the application scraped financial information from a site,
+						such as Yahoo Finance. Once the information was obtained, it was
+						to be put into a database of my choice, then retrieved from the
+						database and displayed to the user. Please log in, or register a
+						new account and have a look around. No personal information is
+						needed to register a new account. <br>
+						<br> Technologies used in this application are as follows:
+					</p>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Java 9</li>
+						<li class="list-group-item">Maven</li>
+						<li class="list-group-item">Spring</li>
+						<li class="list-group-item">Spring Security</li>
+						<li class="list-group-item">Hibernate</li>
+						<li class="list-group-item">JavaScript</li>
+						<li class="list-group-item">jQuery</li>
+						<li class="list-group-item">MySql</li>
+						<li class="list-group-item">Selenium</li>
+						<li class="list-group-item">Bootstrap</li>
+					</ul>
 				</div>
 			</div>
 		</div>

@@ -130,7 +130,7 @@
 		</table>
 		
 		<a href='${pageContext.request.contextPath}/welcome'><button type="button"
-				class="btn btn-outline-primary">Back to home page.</button></a>
+				class="btn btn-outline-primary">Back to home page</button></a>
 
 	</div>
 
