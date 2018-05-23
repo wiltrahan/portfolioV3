@@ -15,7 +15,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 	
-
 	$(document).ready(function() {
 		$('#loading').hide();
 		$('.scrape-error').hide();
@@ -38,7 +37,7 @@
 						document.location.assign("list");
 					}, 3000); 
 				},
-				fail: function() {
+				fail:function() {
 					$(document).ajaxStop(function() {
 						$('#loading').hide();
 						$('.scrape-error').show();
