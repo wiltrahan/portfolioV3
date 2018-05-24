@@ -64,48 +64,38 @@
 	<div class="container">
 		<div class="row">
 			<div id="loginbox" class="col-md-4">
-						<div class="col-md-12">
-			
-			<c:choose>
-				<c:when test="${not empty pageContext.request.userPrincipal}">
-					<a href='${pageContext.request.contextPath}/date/list'><button
-								type="button" class="btn btn-outline-primary">Back to
-								daily listings</button></a>
-				</c:when>
-				<c:otherwise>
-	
+				<div class="col-md-12">
+
+					<c:choose>
+						<c:when test="${not empty pageContext.request.userPrincipal}">
+							<a href='${pageContext.request.contextPath}/date/list'><button
+									type="button" class="btn btn-outline-primary">Back to
+									daily listings</button></a>
+						</c:when>
+						<c:otherwise>
 							<div class="panel panel-info">
 								<div class="panel-heading">
 									<div class="panel-title">Sign In</div>
 								</div>
+								
 								<div class="panel-body">
 									<!-- Login Form -->
-									<form
-										action="${pageContext.request.contextPath}/authenticateTheUser"
-										method="POST" class="form-horizontal">
+									<form action="${pageContext.request.contextPath}/authenticateTheUser" method="POST" class="form-horizontal">
 										<!-- Place for messages: error, alert etc ... -->
 										<div class="form-group">
 											<div class="col-xs-15">
 												<div>
-
 													<!-- Check for login error -->
-
 													<c:if test="${param.error != null}">
-
 														<div class="alert alert-danger col-xs-offset-1 col-xs-10">
 															Invalid username and password.</div>
-
 													</c:if>
-
 													<!-- Check for logout -->
-
 													<c:if test="${param.logout != null}">
 
 														<div class="alert alert-success col-xs-offset-1 col-xs-10">
 															You have been logged out.</div>
-
 													</c:if>
-
 												</div>
 											</div>
 										</div>
@@ -115,43 +105,33 @@
 											<input type="text" name="username" placeholder="username"
 												class="form-control">
 										</div>
-
 										<!-- Password -->
 										<div style="margin-bottom: 25px" class="input-group">
 											<input type="password" name="password" placeholder="password"
 												class="form-control">
 										</div>
-
 										<!-- Login/Submit Button -->
 										<div class="form-group">
 											<div class="col-sm-6 controls">
 												<button type="submit" class="btn btn-success">Login</button>
-
-
 											</div>
 										</div>
 
-										<input type="hidden" name="${_csrf.parameterName}"
-											value="${_csrf.token}" />
+										<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 									</form>
-
 								</div>
-
 							</div>
 
 							<div>
-								<a
-									href="${pageContext.request.contextPath}/register/showRegistrationForm"
-									class="btn btn-primary" role="button" aria-pressed="true">Register
-									New User</a>
+								<a href="${pageContext.request.contextPath}/register/showRegistrationForm"
+									class="btn btn-primary" role="button" aria-pressed="true">Register New User</a>
 							</div>
-						
-				</c:otherwise>
-			</c:choose>
+						</c:otherwise>
+					</c:choose>
+				</div>
 			</div>
-					</div>
 
-			<!-- KEEP THIS AS IS!!!!!! -->
+			<!-- APP INFORMATION -->
 			<div class="col-md-8">
 				<div class="col-md-12" id="app-info-box">
 					<p class="text-justify">
