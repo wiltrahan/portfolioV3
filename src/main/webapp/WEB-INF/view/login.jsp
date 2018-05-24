@@ -69,7 +69,7 @@
 					<c:choose>
 						<c:when test="${not empty pageContext.request.userPrincipal}">
 							<a href='${pageContext.request.contextPath}/date/list'><button
-									type="button" class="btn btn-outline-primary">Back to
+									type="button" class="btn btn-outline-primary mybtn">Back to
 									daily listings</button></a>
 						</c:when>
 						<c:otherwise>

@@ -70,7 +70,7 @@
 		</table>
 
 		<a href="list"><button type="button"
-				class="btn btn-outline-primary">Back to daily listings</button></a>
+				class="btn btn-outline-primary mybtn">Back to daily listings</button></a>
 	</div>
 	<footer class="footer">
 		<div class="container">

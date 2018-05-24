@@ -81,10 +81,10 @@
 	</div>
 
 	<div class="container">
-		<button class="btn btn-outline-primary" id="snap" value="snapshot">Get New Snapshot!</button>
+		<button class="btn btn-outline-primary mybtn" id="snap" value="snapshot">Get New Snapshot!</button>
 		<br><br>
 		<a href='${pageContext.request.contextPath}/welcome'><button type="button"
-				class="btn btn-outline-primary">Back to home page</button></a>
+				class="btn btn-outline-primary mybtn">Back to home page</button></a>
 		<hr>
 		<p id="snap-wait">New snapshot will take approximately 10-15 seconds to load so Please-B-Patient <i class="far fa-clock"></i></p>
 	</div>
@@ -124,7 +124,7 @@
 					<td>${tempDate.total}</td>
 					<td>${tempDate.dayGain}</td>
 					<td><a href="${portfolio}">
-							<button type="button" class="btn btn-outline-primary btn-block">
+							<button type="button" class="btn btn-outline-primary btn-block mybtn">
 								More Info</button>
 					</a></td>
 				</tr>
