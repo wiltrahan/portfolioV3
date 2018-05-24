@@ -44,13 +44,8 @@
 							action="${pageContext.request.contextPath}/logout" method="POST">
 							<input type="submit" class="btn navbar-btn my-nav-btn"
 								value="Logout" />
-						</form:form>
-					</li>
-					<li>
-						<a href='${pageContext.request.contextPath}/date/list'><button type="button"
-							class="btn navbar-btn my-nav-btn">Back to daily listings</button></a>
-					</li>
-				</ul>                   
+						</form:form></li>
+				</ul>
 			</c:if>
 		</div>
 	</nav>
@@ -65,84 +60,98 @@
 		</div>
 	</div>
 	<!-- LOGIN CONTAINER -->
+
 	<div class="container">
 		<div class="row">
 			<div id="loginbox" class="col-md-4">
-				<div class="col-md-12">
-					<div class="panel panel-info">
-						<div class="panel-heading">
-							<div class="panel-title">Sign In</div>
-						</div>
-						<div class="panel-body">
-							<!-- Login Form -->
-							<form
-								action="${pageContext.request.contextPath}/authenticateTheUser"
-								method="POST" class="form-horizontal">
-								<!-- Place for messages: error, alert etc ... -->
-								<div class="form-group">
-									<div class="col-xs-15">
-										<div>
+						<div class="col-md-12">
+			
+			<c:choose>
+				<c:when test="${not empty pageContext.request.userPrincipal}">
+					<a href='${pageContext.request.contextPath}/date/list'><button
+								type="button" class="btn btn-outline-primary">Back to
+								daily listings</button></a>
+				</c:when>
+				<c:otherwise>
+	
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<div class="panel-title">Sign In</div>
+								</div>
+								<div class="panel-body">
+									<!-- Login Form -->
+									<form
+										action="${pageContext.request.contextPath}/authenticateTheUser"
+										method="POST" class="form-horizontal">
+										<!-- Place for messages: error, alert etc ... -->
+										<div class="form-group">
+											<div class="col-xs-15">
+												<div>
 
-											<!-- Check for login error -->
+													<!-- Check for login error -->
 
-											<c:if test="${param.error != null}">
+													<c:if test="${param.error != null}">
 
-												<div class="alert alert-danger col-xs-offset-1 col-xs-10">
-													Invalid username and password.</div>
+														<div class="alert alert-danger col-xs-offset-1 col-xs-10">
+															Invalid username and password.</div>
 
-											</c:if>
+													</c:if>
 
-											<!-- Check for logout -->
+													<!-- Check for logout -->
 
-											<c:if test="${param.logout != null}">
+													<c:if test="${param.logout != null}">
 
-												<div class="alert alert-success col-xs-offset-1 col-xs-10">
-													You have been logged out.</div>
+														<div class="alert alert-success col-xs-offset-1 col-xs-10">
+															You have been logged out.</div>
 
-											</c:if>
+													</c:if>
 
+												</div>
+											</div>
 										</div>
-									</div>
+
+										<!-- User name -->
+										<div style="margin-bottom: 25px" class="input-group">
+											<input type="text" name="username" placeholder="username"
+												class="form-control">
+										</div>
+
+										<!-- Password -->
+										<div style="margin-bottom: 25px" class="input-group">
+											<input type="password" name="password" placeholder="password"
+												class="form-control">
+										</div>
+
+										<!-- Login/Submit Button -->
+										<div class="form-group">
+											<div class="col-sm-6 controls">
+												<button type="submit" class="btn btn-success">Login</button>
+
+
+											</div>
+										</div>
+
+										<input type="hidden" name="${_csrf.parameterName}"
+											value="${_csrf.token}" />
+									</form>
+
 								</div>
 
-								<!-- User name -->
-								<div style="margin-bottom: 25px" class="input-group">
-									<input type="text" name="username" placeholder="username"
-										class="form-control">
-								</div>
+							</div>
 
-								<!-- Password -->
-								<div style="margin-bottom: 25px" class="input-group">
-									<input type="password" name="password" placeholder="password"
-										class="form-control">
-								</div>
-
-								<!-- Login/Submit Button -->
-								<div class="form-group">
-									<div class="col-sm-6 controls">
-										<button type="submit" class="btn btn-success">Login</button>
-
-
-									</div>
-								</div>
-
-								<input type="hidden" name="${_csrf.parameterName}"
-									value="${_csrf.token}" />
-							</form>
-
-						</div>
-
-					</div>
-
-					<div>
-						<a
-							href="${pageContext.request.contextPath}/register/showRegistrationForm"
-							class="btn btn-primary" role="button" aria-pressed="true">Register
-							New User</a>
-					</div>
-				</div>
+							<div>
+								<a
+									href="${pageContext.request.contextPath}/register/showRegistrationForm"
+									class="btn btn-primary" role="button" aria-pressed="true">Register
+									New User</a>
+							</div>
+						
+				</c:otherwise>
+			</c:choose>
 			</div>
+					</div>
 
+			<!-- KEEP THIS AS IS!!!!!! -->
 			<div class="col-md-8">
 				<div class="col-md-12" id="app-info-box">
 					<p class="text-justify">
@@ -155,8 +164,8 @@
 						to be put into a database of my choice, then retrieved from the
 						database and displayed to the user. Please log in, or register a
 						new account and have a look around. No personal information is
-						needed to register a new account. <br>
-						<br> Technologies used in this application are as follows:
+						needed to register a new account. <br> <br> Technologies
+						used in this application are as follows:
 					</p>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item">Java 9</li>

@@ -82,13 +82,15 @@
 
 	<div class="container">
 		<button class="btn btn-outline-primary" id="snap" value="snapshot">Get New Snapshot!</button>
+		<br><br>
+		<a href='${pageContext.request.contextPath}/welcome'><button type="button"
+				class="btn btn-outline-primary">Back to home page</button></a>
 		<hr>
 		<p id="snap-wait">New snapshot will take approximately 10-15 seconds to load so Please-B-Patient <i class="far fa-clock"></i></p>
 	</div>
 	
 	<div class="container text-center">
 		<div id="loading">
-    		<!-- <div id="spinner"></div> -->
     		<p>Scrape In Progress! <span><i class="fas fa-stopwatch"></i></span></p>
     		<p class="scrape-error">Something went wrong, please try again. </p>
 		</div>
@@ -128,10 +130,6 @@
 				</tr>
 			</c:forEach>
 		</table>
-		
-		<a href='${pageContext.request.contextPath}/welcome'><button type="button"
-				class="btn btn-outline-primary">Back to home page</button></a>
-
 	</div>
 
 	<footer class="footer">
