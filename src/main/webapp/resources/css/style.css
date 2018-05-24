@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500|Raleway:300|Roboto:100');
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans|Quattrocento:700');
+
+
+
 body {
     background-color: #F2F2F2;
     padding-top: 60px;
 }
 
 h1 {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Quattrocento', serif;
 }
 
 p.lead {
+	font-family: 'Roboto', sans-serif;
+}
+
+p#snap-wait {
 	font-family: 'Roboto', sans-serif;
 }
 
