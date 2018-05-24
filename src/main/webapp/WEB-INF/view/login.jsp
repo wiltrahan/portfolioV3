@@ -46,7 +46,11 @@
 								value="Logout" />
 						</form:form>
 					</li>
-				</ul>
+					<li>
+						<a href='${pageContext.request.contextPath}/date/list'><button type="button"
+							class="btn navbar-btn my-nav-btn">Back to daily listings</button></a>
+					</li>
+				</ul>                   
 			</c:if>
 		</div>
 	</nav>
