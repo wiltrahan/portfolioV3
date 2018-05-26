@@ -157,6 +157,7 @@
 						<li class="list-group-item">jQuery</li>
 						<li class="list-group-item">MySql</li>
 						<li class="list-group-item">Selenium</li>
+						<li class="list-group-item">JSP</li>
 						<li class="list-group-item">Bootstrap</li>
 					</ul>
 				</div>

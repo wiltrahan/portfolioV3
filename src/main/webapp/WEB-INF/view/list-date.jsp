@@ -32,7 +32,7 @@
 					$(document).ajaxStop(function() {
 						$('#loading').hide();
 					})
-					$("#snap-wait").html("Success! <br> Loading below in: 3...2...").addClass("new-snapshot text-center");
+					$("#snap-wait").html("Success! <br> Loading below in 3...2...").addClass("new-snapshot text-center");
 					  setTimeout(function() {
 						document.location.assign("list");
 					}, 3000); 
