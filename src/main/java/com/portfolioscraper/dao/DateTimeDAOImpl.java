@@ -41,7 +41,10 @@ public class DateTimeDAOImpl implements DateTimeDAO {
 				currentSession.createQuery("from DateTime", DateTime.class);
 		
 		//execute query and get result list
-		List<DateTime> dateTimes = theQuery.getResultList();
+		List<DateTime> dateTimes = theQuery
+				.setFirstResult(10)
+				.setMaxResults(10)
+				.getResultList();
 			
 		//return results	
 		return dateTimes;
